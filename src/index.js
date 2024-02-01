@@ -1,3 +1,3 @@
 import './css/styles.css';
-import Object from './object.js';
+import Sudoku from './sudoku.js';
 
