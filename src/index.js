@@ -1,5 +1,5 @@
 import './css/styles.css';
-import Sudoku from './sudoku.js';
+import { Sudoku, isWinner } from './sudoku.js';
 
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -9,6 +9,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
     return parseInt(num);
   });
   const sudoku = new Sudoku(finalInput);
-
+  let result = document.createElement("p");
+  result.innerText = isWinner(sudoku);
+  document.getElementById("result").append(result);
 });
 
